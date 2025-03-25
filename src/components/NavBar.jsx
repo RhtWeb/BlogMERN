@@ -1,9 +1,7 @@
-// import { Link } from "react-router"
-
-import { IKImage } from "imagekitio-react";
 import { useState } from "react";
 import { Link } from "react-router"
 import Image from "./Image";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -66,7 +64,7 @@ const NavBar = () => {
         <Link to="/posts?sort=trending">Trending</Link>
         <Link to="/posts?sort=popular">Most Popular</Link>
         <Link to="/">About</Link>
-        {/* <SignedOut>
+        <SignedOut>
           <Link to="/login">
             <button className="py-2 px-4 rounded-3xl bg-blue-800 text-white">
               Login 👋
@@ -75,7 +73,7 @@ const NavBar = () => {
         </SignedOut>
         <SignedIn>
           <UserButton />
-        </SignedIn> */}
+        </SignedIn>
       </div>
     </div>
   )
